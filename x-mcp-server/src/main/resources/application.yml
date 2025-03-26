@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  ai:
+    mcp:
+      server:
+        name: x-ai-mcp-server
+        version: 1.0.0
+  main:
+    banner-mode: off
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/xdb?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: username
+    password: ''
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: x-work
+      minimum-idle: 1
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
