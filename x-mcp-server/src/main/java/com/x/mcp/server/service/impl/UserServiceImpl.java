@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    @Tool(description = "Get user list")
+    @Tool(name = "getUserList", description = "Get user list")
     public List<User> getUserList() {
         return userIService.list();
     }
